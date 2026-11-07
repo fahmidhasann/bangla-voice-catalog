@@ -22,6 +22,8 @@ header p{color:var(--mu);margin:4px 0 0}
 .seg{display:flex;background:var(--chip);border-radius:8px;padding:3px}
 .seg button{border:0;background:none;color:var(--mu);font:inherit;font-size:14px;padding:5px 11px;border-radius:6px;cursor:pointer}
 .seg button.on{background:var(--card);color:var(--tx);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+select{padding:7px 8px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit;font-size:14px}
+.tag.ok{background:none;border:1px solid var(--bd)}
 .count{color:var(--mu);font-size:13px;margin-left:auto}
 h2{font-size:17px;margin:26px 0 4px}
 .sub{color:var(--mu);font-size:13px;margin:0 0 12px}
@@ -54,25 +56,27 @@ footer{margin-top:40px;color:var(--mu);font-size:12px}
 <div class="wrap">
 <header>
   <h1>বাংলা ভয়েস ক্যাটালগ</h1>
-  <p>ElevenLabs-এর যেসব ভয়েস বাংলা বলতে পারে · মডেল <b>eleven_v4</b> · সব ভয়েসে একই লাইন</p>
+  <p>ElevenLabs-এর যেসব ভয়েস বাংলা বলতে পারে · মডেল <b id="model">eleven_v4</b> · আপডেট <span id="upd"></span> · সব ভয়েসে একই লাইন</p>
 </header>
-<div class="script"><small>ডেমো স্ক্রিপ্ট</small>আসসালামু আলাইকুম। আজকের ভিডিওতে আমরা শিখব, কীভাবে খুব সহজে প্রযুক্তি ব্যবহার করে নিজের কাজকে আরও দ্রুত আর সুন্দর করা যায়। চলুন, শুরু করা যাক!</div>
+<div class="script"><small>ডেমো স্ক্রিপ্ট</small><span id="scr"></span></div>
 
 <div class="bar">
   <input id="q" type="search" placeholder="নাম বা ধরন দিয়ে খুঁজুন…">
   <div class="seg" id="gseg"><button data-v="all" class="on">সব</button><button data-v="M">ছেলে</button><button data-v="F">মেয়ে</button></div>
   <div class="seg" id="fseg"><button data-v="all" class="on">সব</button><button data-v="fav">⭐ পছন্দ</button></div>
+  <select id="sort"><option value="uses">জনপ্রিয়তা</option><option value="conf">মেশিন নিশ্চয়তা</option><option value="name">নাম</option></select>
   <span class="count" id="count"></span>
 </div>
 <div id="list"></div>
-<footer>⭐ পছন্দ আর নোট এই ব্রাউজারেই সেভ থাকে। ভয়েস ID কপি করে ElevenLabs-এ সরাসরি ব্যবহার করুন।</footer>
+<footer>⭐ পছন্দ আর নোট এই ব্রাউজারেই সেভ থাকে। ভয়েস ID কপি করে ElevenLabs-এ সরাসরি ব্যবহার করুন।<br>
+<b>মেশিন যাচাই:</b> প্রতিটা ক্লিপ ElevenLabs speech-to-text (scribe_v2) দিয়ে লেখায় ফেরত আনা হয়েছে। "শুদ্ধ" মানে স্ক্রিপ্টের সাথে কতটা মিলেছে; শতাংশটা হলো যন্ত্র কতটা নিশ্চিত ছিল। উচ্চারণের টান বা কণ্ঠের মান কানে শুনে বিচার করুন।</footer>
 </div>
 
 <script>
 const TIERS=[
  ['native','বাংলা নেটিভ','ElevenLabs লাইব্রেরিতে মূল ভাষা বাংলা'],
  ['accent','বাংলা কণ্ঠের অন্য ভয়েস','বাঙালি কণ্ঠ বা উচ্চারণ, তবে লাইব্রেরিতে মূল ভাষা হিসেবে ইংরেজি/হিন্দি দেওয়া'],
- ['multi','মাল্টিলিঙ্গুয়াল (নন-নেটিভ)','ElevenLabs-এর ডিফল্ট ভয়েস, v4 দিয়ে বাংলা বলানো · উচ্চারণে বিদেশি টান থাকতে পারে']];
+ ['multi','মাল্টিলিঙ্গুয়াল (ইংলিশ নেটিভ)','ElevenLabs-এর ডিফল্ট ভয়েস (Liam, Brian, Alice…), v4 দিয়ে বাংলা বলানো · কিছুতে হালকা বিদেশি টান থাকতে পারে']];
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let favs=new Set(store.get('favs',[])), notes=store.get('notes',{}), G='all', F='all', V=[];
 const audio=new Audio(); let cur=null;
@@ -81,13 +85,14 @@ const fmt=s=>isFinite(s)?`0:${String(Math.floor(s)).padStart(2,'0')}`:'';
 function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function card(v){
  return `<div class="card${favs.has(v.id)?' fav':''}${notes[v.id]?' notes':''}" data-id="${v.id}">
-  <div class="row"><span class="name">${esc(v.name)}</span>${v.pick?'<span class="tag pick">ক্লিয়ার</span>':''}<span class="tag">${v.g==='M'?'ছেলে':'মেয়ে'}</span></div>
+  <div class="row"><span class="name">${esc(v.name)}</span>${v.pick?'<span class="tag pick">ক্লিয়ার</span>':''}<span class="tag">${v.g==='M'?'ছেলে':'মেয়ে'}</span>${v.match!=null?`<span class="tag ok" title="যন্ত্র যা শুনেছে: ${esc(v.heard||'')}">${v.match===100?'✓ শুদ্ধ':v.match+'% মিল'} · ${Math.round(v.conf)}%</span>`:''}</div>
   <p class="desc">${esc(v.desc)}${v.uses>1000?` · ${(v.uses/1000).toFixed(1)}k ব্যবহার`:''}</p>
   <div class="play"><button class="pb" aria-label="প্লে">${ico.play}</button><div class="prog"><i></i></div><span class="t">${fmt(v.dur)}</span></div>
   <div class="foot"><button class="ib fv${favs.has(v.id)?' on':''}">⭐ পছন্দ</button><button class="ib nt">✎ নোট</button><button class="ib cp">ID কপি</button><code>${v.id}</code></div>
   <textarea placeholder="এই ভয়েস নিয়ে নোট…">${esc(notes[v.id]||'')}</textarea></div>`}
 function render(){
- const q=document.getElementById('q').value.trim().toLowerCase();
+ const q=document.getElementById('q').value.trim().toLowerCase(), S=document.getElementById('sort').value;
+ V.sort(S==='name'?(a,b)=>a.name.localeCompare(b.name):S==='conf'?(a,b)=>(b.conf||0)-(a.conf||0):(a,b)=>(b.pick-a.pick)||(b.uses-a.uses));
  const f=V.filter(v=>(G==='all'||v.g===G)&&(F==='all'||favs.has(v.id))&&(!q||(v.name+' '+v.desc).toLowerCase().includes(q)));
  document.getElementById('count').textContent=`${f.length}টি ভয়েস`;
  let h='';
@@ -119,7 +124,9 @@ audio.addEventListener('ended',()=>{if(cur){cur.querySelector('.prog i').style.w
 for(const [sid,set] of [['gseg',v=>G=v],['fseg',v=>F=v]])document.getElementById(sid).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
  document.querySelectorAll(`#${sid} button`).forEach(x=>x.classList.toggle('on',x===b));audio.pause();set(b.dataset.v);render()});
 document.getElementById('q').addEventListener('input',render);
-fetch('voices.json').then(r=>r.json()).then(d=>{V=d.sort((a,b)=>(b.pick-a.pick)||(b.uses-a.uses));render()});
+document.getElementById('sort').addEventListener('change',()=>{audio.pause();render()});
+fetch('meta.json',{cache:'no-cache'}).then(r=>r.json()).then(m=>{model.textContent=m.model;upd.textContent=m.updated||'';scr.textContent=m.script}).catch(()=>{});
+fetch('voices.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{V=d;render()});
 </script>
 </body>
 </html>
