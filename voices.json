@@ -1,0 +1,492 @@
+[
+ {
+  "id": "1JOQMQINvsOLiEu2pZFd",
+  "name": "Ashwat",
+  "desc": "Calm, Pleasant Storyteller",
+  "g": "M",
+  "tier": "native",
+  "uses": 19229,
+  "dur": 11.2,
+  "pick": false
+ },
+ {
+  "id": "FhOnCtjmaAIRIS1Dg2bk",
+  "name": "Biju S",
+  "desc": "Causal Interactive Bengali Gossip Friend",
+  "g": "M",
+  "tier": "native",
+  "uses": 34353,
+  "dur": 11.0,
+  "pick": false
+ },
+ {
+  "id": "iuABfyf7pRoBzuPqzUCt",
+  "name": "Binod",
+  "desc": "Energetic Bengali Social Media",
+  "g": "M",
+  "tier": "native",
+  "uses": 14297,
+  "dur": 10.7,
+  "pick": false
+ },
+ {
+  "id": "VizHiwkPO7hXc967v4tE",
+  "name": "Rakib",
+  "desc": "Deep, Authoritative",
+  "g": "M",
+  "tier": "native",
+  "uses": 10254,
+  "dur": 11.2,
+  "pick": true
+ },
+ {
+  "id": "j5PhP1QJv2DvlhRv3mEv",
+  "name": "Subhajit",
+  "desc": "Grounded Bengali Storyteller",
+  "g": "M",
+  "tier": "native",
+  "uses": 10395,
+  "dur": 11.5,
+  "pick": false
+ },
+ {
+  "id": "vvOYlSJHf8lTWIG4tDNP",
+  "name": "Rayhan",
+  "desc": "Engaging & Excitement",
+  "g": "M",
+  "tier": "native",
+  "uses": 8896,
+  "dur": 10.5,
+  "pick": false
+ },
+ {
+  "id": "GuSivqtqi1qfWxEuGhqa",
+  "name": "Dipankar",
+  "desc": "Natural, Calm Conversations",
+  "g": "M",
+  "tier": "native",
+  "uses": 8493,
+  "dur": 11.3,
+  "pick": false
+ },
+ {
+  "id": "UVvx1ZKtcJQTxfaKdh06",
+  "name": "Deb",
+  "desc": "Dark Suspense Bengali Narrator",
+  "g": "M",
+  "tier": "native",
+  "uses": 9434,
+  "dur": 11.2,
+  "pick": false
+ },
+ {
+  "id": "6fKdJFZHa5oCXNSVGieE",
+  "name": "Dr Mahmood",
+  "desc": "Calm & Telecasting Host",
+  "g": "M",
+  "tier": "native",
+  "uses": 6395,
+  "dur": 11.8,
+  "pick": true
+ },
+ {
+  "id": "YyFoWJwI20bOlOPfwy6X",
+  "name": "Sharaav",
+  "desc": "Mysterious Suspense Narrator",
+  "g": "M",
+  "tier": "native",
+  "uses": 3494,
+  "dur": 11.4,
+  "pick": false
+ },
+ {
+  "id": "fCckJmWQH9jeEmbAYpxv",
+  "name": "Syed",
+  "desc": "Natural & Calm Bengali Narration",
+  "g": "M",
+  "tier": "native",
+  "uses": 3953,
+  "dur": 11.0,
+  "pick": false
+ },
+ {
+  "id": "3ja4A4YiVrDCSScO6rfp",
+  "name": "Deb",
+  "desc": "Motivational, Calm Creator",
+  "g": "M",
+  "tier": "native",
+  "uses": 3886,
+  "dur": 11.3,
+  "pick": false
+ },
+ {
+  "id": "3vl8X3o2mxL44uBIHGkS",
+  "name": "Shreyash",
+  "desc": "Calm Bengali Conversational",
+  "g": "M",
+  "tier": "native",
+  "uses": 3621,
+  "dur": 11.4,
+  "pick": false
+ },
+ {
+  "id": "6551pRDYAi5ZzvTYlIp6",
+  "name": "Maksud Bangla",
+  "desc": "Informative",
+  "g": "M",
+  "tier": "native",
+  "uses": 530,
+  "dur": 10.9,
+  "pick": false
+ },
+ {
+  "id": "d532cgnzlrx7AWL3CD9i",
+  "name": "Fahad Mir",
+  "desc": "Casual",
+  "g": "M",
+  "tier": "native",
+  "uses": 1430,
+  "dur": 10.4,
+  "pick": true
+ },
+ {
+  "id": "yBrGXLW1RaXDUjUf3kQi",
+  "name": "Tazim",
+  "desc": "Natural Bangla & Banglish",
+  "g": "M",
+  "tier": "native",
+  "uses": 1335,
+  "dur": 10.4,
+  "pick": true
+ },
+ {
+  "id": "zVPU9Rf8bHDcntLKA3LY",
+  "name": "Hamim",
+  "desc": "Deep,  Mature & Calm Bengali",
+  "g": "M",
+  "tier": "native",
+  "uses": 733,
+  "dur": 11.2,
+  "pick": true
+ },
+ {
+  "id": "MNuISDUw2Kqij2hI0QHV",
+  "name": "Jafor",
+  "desc": "Chill",
+  "g": "M",
+  "tier": "native",
+  "uses": 176,
+  "dur": 10.8,
+  "pick": false
+ },
+ {
+  "id": "oaRPRCwF6IVkimT1QKpn",
+  "name": "Mazed Talukdar",
+  "desc": "Calm",
+  "g": "M",
+  "tier": "native",
+  "uses": 168,
+  "dur": 10.9,
+  "pick": false
+ },
+ {
+  "id": "2jEx4hVYePE2ZcBrZfqj",
+  "name": "Rahat",
+  "desc": "Narrator",
+  "g": "M",
+  "tier": "native",
+  "uses": 18,
+  "dur": 11.3,
+  "pick": false
+ },
+ {
+  "id": "xi6A9YWXmGc3yDK4kXS9",
+  "name": "Shariful",
+  "desc": "Casual",
+  "g": "M",
+  "tier": "native",
+  "uses": 23,
+  "dur": 11.9,
+  "pick": false
+ },
+ {
+  "id": "5WbDBNLwAg4h26Km0GgQ",
+  "name": "Arfa",
+  "desc": "Sweet Love Story Narrator",
+  "g": "F",
+  "tier": "native",
+  "uses": 10197,
+  "dur": 12.1,
+  "pick": false
+ },
+ {
+  "id": "nUarI71Lei0IFt1ybDm1",
+  "name": "Swati S",
+  "desc": "Pleasant Engaging Creator",
+  "g": "F",
+  "tier": "native",
+  "uses": 10499,
+  "dur": 11.7,
+  "pick": false
+ },
+ {
+  "id": "75CHIF904aWz6uq77J3P",
+  "name": "Parnita",
+  "desc": "Natural Bengali Gossip Girl",
+  "g": "F",
+  "tier": "native",
+  "uses": 13924,
+  "dur": 12.3,
+  "pick": false
+ },
+ {
+  "id": "q4yUdydpWxqfmkQH7gK7",
+  "name": "Swati S",
+  "desc": "Young Sweet Bengali female",
+  "g": "F",
+  "tier": "native",
+  "uses": 11339,
+  "dur": 12.5,
+  "pick": false
+ },
+ {
+  "id": "70QpbCWFDvTpWo8ZKOUb",
+  "name": "Niharika",
+  "desc": "Energetic Bengali Creator",
+  "g": "F",
+  "tier": "native",
+  "uses": 7888,
+  "dur": 11.8,
+  "pick": false
+ },
+ {
+  "id": "VixjjTLMa0rgjbAS8LTX",
+  "name": "Madhusmita",
+  "desc": "Sweet Conversational Friend",
+  "g": "F",
+  "tier": "native",
+  "uses": 3906,
+  "dur": 12.0,
+  "pick": false
+ },
+ {
+  "id": "3DF5lO2rtqNp6A9emuj0",
+  "name": "Girija",
+  "desc": "Captivating, Dramatic Narrator",
+  "g": "F",
+  "tier": "native",
+  "uses": 3887,
+  "dur": 11.9,
+  "pick": false
+ },
+ {
+  "id": "N6PAsaEqAXM8EIxJn9g3",
+  "name": "Indrani K",
+  "desc": "Energetic & Animated",
+  "g": "F",
+  "tier": "native",
+  "uses": 3042,
+  "dur": 11.5,
+  "pick": false
+ },
+ {
+  "id": "8U6QQz51HQvOsmbnTJ3D",
+  "name": "Mahika M",
+  "desc": "Natural Bengali Conversation",
+  "g": "F",
+  "tier": "native",
+  "uses": 3332,
+  "dur": 11.1,
+  "pick": false
+ },
+ {
+  "id": "WiaIVvI1gDL4vT4y7qUU",
+  "name": "Suman Pro",
+  "desc": "Deep, Calm and Gentle",
+  "g": "M",
+  "tier": "accent",
+  "uses": 39112,
+  "dur": 11.3,
+  "pick": true
+ },
+ {
+  "id": "FDQcYNtvPtQjNlTyU3du",
+  "name": "Sumi",
+  "desc": "Soft, Romantic and Emotional",
+  "g": "F",
+  "tier": "accent",
+  "uses": 39418,
+  "dur": 11.9,
+  "pick": false
+ },
+ {
+  "id": "u3v81nA6jgD2f8PNeClc",
+  "name": "Khabir Bhai",
+  "desc": "Young Bengali male",
+  "g": "M",
+  "tier": "accent",
+  "uses": 10886,
+  "dur": 9.9,
+  "pick": false
+ },
+ {
+  "id": "p1jIJRocd9DyXArSvL2u",
+  "name": "Sumi (Viral)",
+  "desc": "Viral Energetic Social Media",
+  "g": "F",
+  "tier": "accent",
+  "uses": 199,
+  "dur": 12.4,
+  "pick": false
+ },
+ {
+  "id": "dv6TxG2lrdQ5yGQ0m9Cr",
+  "name": "Devi",
+  "desc": "Lifestyle Coach",
+  "g": "F",
+  "tier": "accent",
+  "uses": 144,
+  "dur": 11.8,
+  "pick": false
+ },
+ {
+  "id": "G0oTBVURsNzRJ5isMDbH",
+  "name": "Sushmita",
+  "desc": "Professional Health Coach",
+  "g": "F",
+  "tier": "accent",
+  "uses": 110,
+  "dur": 12.0,
+  "pick": false
+ },
+ {
+  "id": "rjzfuMqaVXKNgQQStSXa",
+  "name": "Sumon",
+  "desc": "Bangladeshi — Narration & Tutorials",
+  "g": "M",
+  "tier": "accent",
+  "uses": 509,
+  "dur": 11.5,
+  "pick": true
+ },
+ {
+  "id": "hll21KcaaV8dqm92ernf",
+  "name": "Masud Karim",
+  "desc": "Bangladeshi — Warm",
+  "g": "M",
+  "tier": "accent",
+  "uses": 1031,
+  "dur": 11.7,
+  "pick": false
+ },
+ {
+  "id": "2SwahtADKnXmzWIKiDFi",
+  "name": "Jahir",
+  "desc": "Conversational, Bengali accent",
+  "g": "M",
+  "tier": "accent",
+  "uses": 50,
+  "dur": 10.9,
+  "pick": false
+ },
+ {
+  "id": "SYVQhjMSUvWA1w0HkidA",
+  "name": "Maya",
+  "desc": "South Asian, articulate",
+  "g": "F",
+  "tier": "accent",
+  "uses": 1006,
+  "dur": 12.8,
+  "pick": false
+ },
+ {
+  "id": "COxU2hNeeEyjmWJ458OI",
+  "name": "Rafiq",
+  "desc": "Upbeat, Blunt, Bright (Voice Design)",
+  "g": "M",
+  "tier": "accent",
+  "uses": 0,
+  "dur": 9.8,
+  "pick": false
+ },
+ {
+  "id": "nPczCjzI2devNBz1zQrb",
+  "name": "Brian",
+  "desc": "Deep, Resonant",
+  "g": "M",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.2,
+  "pick": false
+ },
+ {
+  "id": "onwK4e9ZLuTAKqWW03F9",
+  "name": "Daniel",
+  "desc": "Steady Broadcaster",
+  "g": "M",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.7,
+  "pick": false
+ },
+ {
+  "id": "JBFqnCBsd6RMkjVDRZzb",
+  "name": "George",
+  "desc": "Warm Storyteller",
+  "g": "M",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.2,
+  "pick": false
+ },
+ {
+  "id": "pNInz6obpgDQGcFmaJgB",
+  "name": "Adam",
+  "desc": "Dominant, Firm",
+  "g": "M",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.5,
+  "pick": false
+ },
+ {
+  "id": "cjVigY5qzO86Huf0OWal",
+  "name": "Eric",
+  "desc": "Smooth, Trustworthy",
+  "g": "M",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.0,
+  "pick": false
+ },
+ {
+  "id": "Xb7hH8MSUJpSbSDYk0k2",
+  "name": "Alice",
+  "desc": "Clear, Engaging Educator",
+  "g": "F",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.1,
+  "pick": false
+ },
+ {
+  "id": "EXAVITQu4vr4xnSDxMaL",
+  "name": "Sarah",
+  "desc": "Mature, Reassuring",
+  "g": "F",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 11.5,
+  "pick": false
+ },
+ {
+  "id": "XrExE9yKIg1WjnnlVkGX",
+  "name": "Matilda",
+  "desc": "Knowledgeable, Professional",
+  "g": "F",
+  "tier": "multi",
+  "uses": 0,
+  "dur": 12.0,
+  "pick": false
+ }
+]
